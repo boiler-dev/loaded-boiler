@@ -1,5 +1,5 @@
 import { Fn2, fn2out } from "./fn2"
-import { DepGraph } from "./dep-graph"
+import { DepGraph } from "./depGraph"
 
 export interface LoadedEvent {
   name: string
