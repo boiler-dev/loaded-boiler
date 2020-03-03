@@ -307,4 +307,4 @@ export class Loaded {
 }
 
 export default new Loaded()
-export * from "fn2"
+export * from "./fn2"
