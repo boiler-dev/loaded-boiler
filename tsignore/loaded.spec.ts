@@ -4,18 +4,18 @@ import loaded from "../src/loaded"
 import logger from "../src/logger"
 import tinyId from "../src/tinyId"
 
-function delay(t: number, v?: any): Promise<any> {
-  return new Promise((resolve): void => {
-    setTimeout(resolve.bind(null, v), t)
-  })
-}
-
-beforeEach(() => {
-  loaded.reset()
-  loaded.load({ logger, tinyId })
-})
-
 describe("loaded", () => {
+  function delay(t: number, v?: any): Promise<any> {
+    return new Promise((resolve): void => {
+      setTimeout(resolve.bind(null, v), t)
+    })
+  }
+
+  beforeEach(() => {
+    loaded.reset()
+    loaded.load({ logger, tinyId })
+  })
+
   it("loads synchronous libraries", () => {
     const a = {
       b: null,
