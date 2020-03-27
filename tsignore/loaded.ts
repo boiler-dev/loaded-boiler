@@ -74,7 +74,7 @@ export class Loaded {
 
   wait(...libs: string[]): Promise<any> {
     return Promise.all(
-      libs.map(libName => this.loading[libName])
+      libs.map((libName) => this.loading[libName])
     ).then(() => this.loaded)
   }
 
@@ -83,7 +83,7 @@ export class Loaded {
       this.graph.addNode(libName)
       this.libs[libName] = undefined
       this.loading[libName] = new Promise(
-        resolve =>
+        (resolve) =>
           (this.loadingResolvers[libName] = resolve)
       )
     }
